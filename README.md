@@ -1,5 +1,5 @@
 # TurboRivals
-![image](https://github.com/user-attachments/assets/4f659d27-dae7-4caf-adb8-65289385ad1f)
+![image](https://github.com/user-attachments/assets/6586ebd0-acf8-4a86-b029-4abcd20a9284)
 
 ***Description des Classes***
 -------1. GameManager---------
@@ -75,13 +75,41 @@ La classe EMP, qui est également une sous-classe de PowerUp, provoque une onde 
 **Attributs** :
 range : le rayon d'effet de l'onde de choc produite par l'EMP.
 
+---------------13. MenuManager------------------
+La classe MenuManager est responsable de la gestion des interfaces utilisateur liées aux menus du jeu.
+**Attributs** :
+circuitSelection : une structure qui gère la sélection des circuits par le joueur.
+scoreboard : une structure qui affiche le classement et les scores des joueurs.
+Méthodes :
+DisplayCircuitSelection() : affiche les circuits disponibles pour sélection.
+DisplayScoreboard() : affiche les résultats et les scores des joueurs à la fin de la course.
 
+---------------14. RaceInterface------------------
+La classe RaceInterface gère les informations affichées pendant la course.
+**Attributs** 
+currentLap : un entier représentant le tour actuel du joueur.
+playerPosition : la position actuelle du joueur dans la course.
+miniMap : une représentation graphique simplifiée du circuit.
+speed : la vitesse actuelle du véhicule du joueur.
+availablePowers : une liste des pouvoirs disponibles pour le joueur.
+Méthodes :
+UpdateRaceInfo() : met à jour les informations de course affichées, comme le tour actuel et la position du joueur.
+DisplayMiniMap() : affiche la mini-carte du circuit pendant la course.
 
 
 ### Patrons de conception
 j:ai chosis ces deux patrons 
 - **Patron de création** : Singleton pour `GameManager` afin de garantir une seule instance.
+Cela assure une gestion centralisée de tout ce qui concerne la course (comme les véhicules et les tours restants). Cela évite les conflits entre plusieurs instances et facilite l'accès à GameManager depuis n'importe quel autre script.
+//Avantages :
+Accès unique et simplifié aux fonctionnalités du jeu.
+Facilite la gestion de l'état du jeu.
 - **Patron structurel** : Composite pour les véhicules et leurs power-ups.
+Cela permet aux véhicules de posséder plusieurs power-ups de manière flexible, sans avoir besoin de modifier le code chaque fois qu'un nouveau power-up est ajouté.
+//Avantages :
+Flexibilité pour ajouter ou retirer des power-ups.
+Uniformité dans la gestion des véhicules et de leurs effets.
 
   ### Algorithme de déplacement de l'IA
 L'IA utilisera un algorithme de suivi de chemin ( Dijkstra) pour naviguer vers les checkpoints, permettant une prise de décision efficace.
+{Il a pour but de trouver le chemin le plus court entre deux points, ce qui est essentiel pour diriger l'IA vers le prochain checkpoint tout en évitant les obstacles. En utilisant cet algorithme, l'IA peut prendre des décisions intelligentes et naviguer de manière efficace sur le circuit. De plus, il lui permet de s'adapter rapidement aux changements en recalculant son itinéraire si nécessaire, garantissant ainsi une performance optimale durant la course.}
