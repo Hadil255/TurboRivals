@@ -3,7 +3,8 @@ public class GameManager : MonoBehaviour {
     public List<Vehicle> vehicles;
     public int remainingLaps;
 
-    void Start() {
+    void Start() 
+    {
         // Initialisation
     }
 
