@@ -74,3 +74,14 @@ slowingEffect : le facteur de réduction de vitesse appliqué aux véhicules qui
 La classe EMP, qui est également une sous-classe de PowerUp, provoque une onde de choc
 **Attributs** :
 range : le rayon d'effet de l'onde de choc produite par l'EMP.
+
+
+
+
+### Patrons de conception
+j:ai chosis ces deux patrons 
+- **Patron de création** : Singleton pour `GameManager` afin de garantir une seule instance.
+- **Patron structurel** : Composite pour les véhicules et leurs power-ups.
+
+  ### Algorithme de déplacement de l'IA
+L'IA utilisera un algorithme de suivi de chemin ( Dijkstra) pour naviguer vers les checkpoints, permettant une prise de décision efficace.
