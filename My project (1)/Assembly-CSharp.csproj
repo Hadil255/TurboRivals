@@ -65,7 +65,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.17f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Vehicles.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DavidJalbert\TinyLowPolyCars\readme.txt" />
